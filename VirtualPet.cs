@@ -17,7 +17,7 @@ namespace MerazVirtualPet
         private string treat;
         private string favToy;
         
-        //Properties
+        //Constructors
         public VirtualPet (string name)
         {
             this.name = name;
