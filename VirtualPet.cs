@@ -27,7 +27,7 @@ namespace MerazVirtualPet
         {
             this.hungerScore = hungerScore;
             this.energyScore = energyScore;
-            this.energyScore = wasteScore;
+            this.wasteScore = wasteScore;
         }
 
         public VirtualPet (string name, string favToy)
@@ -42,7 +42,19 @@ namespace MerazVirtualPet
             return name;
         }
 
-        public 
+        public void GetHunger(int hunger)
+        {
+            this.hungerScore = hunger;
+        }
 
+        public void GetEnergy(int energy)
+        {
+            this.energyScore = energy;
+        }
+
+        public void GetWaste(int waste)
+        {
+            this.wasteScore = waste;
+        }
     }
 }
