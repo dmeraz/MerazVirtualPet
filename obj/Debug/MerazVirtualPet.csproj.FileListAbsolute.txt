@@ -1,1 +1,6 @@
 c:\users\wecancodeit\documents\visual studio 2015\Projects\MerazVirtualPet\MerazVirtualPet\bin\Debug\MerazVirtualPet.exe.config
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazVirtualPet\MerazVirtualPet\bin\Debug\MerazVirtualPet.exe
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazVirtualPet\MerazVirtualPet\bin\Debug\MerazVirtualPet.pdb
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazVirtualPet\MerazVirtualPet\obj\Debug\MerazVirtualPet.csprojResolveAssemblyReference.cache
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazVirtualPet\MerazVirtualPet\obj\Debug\MerazVirtualPet.exe
+C:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\MerazVirtualPet\MerazVirtualPet\obj\Debug\MerazVirtualPet.pdb
