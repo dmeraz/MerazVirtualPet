@@ -94,15 +94,11 @@ namespace MerazVirtualPet
         {
             get
             {
-                return hungerScore;
+                return this.hungerScore;
             }
             set
             {
-                hungerScore = 5;
-                if (hungerScore < 0)
-                {
-                    hungerScore = 0;
-                }
+                this.hungerScore = value;
             }
         }
 
@@ -110,15 +106,11 @@ namespace MerazVirtualPet
         {
             get
             {
-                return energyScore;
+                return this.energyScore;
             }
             set
             {
-                energyScore = 5;
-                if (energyScore < 0)
-                {
-                    energyScore = 0;
-                }
+                this.energyScore = value;
             }
 
         }
@@ -130,11 +122,7 @@ namespace MerazVirtualPet
             }
             set
             {
-                wasteScore = 5;
-                if (wasteScore < 0)
-                {
-                    wasteScore = 0;
-                }
+                this.wasteScore = value;
             }
         }
 
