@@ -19,18 +19,18 @@ namespace MerazVirtualPet
             Console.WriteLine("||||||||||| ' .\\");
             Console.WriteLine("`|||||||||| _, __o\n");
 
-            Console.WriteLine("Hunger\t\tEnergy\t\tWaste"); //{ Hunger = 10, Energy = 10, Waste = 10}
+            Console.WriteLine("Hunger\t\tEnergy\t\tWaste");}
             //VirtualPet.Tick();
             //Console.WriteLine(Hunger + "\t\t" + Energy + "\t\t" + Waste + "\n");
 
-            VirtualPet name = new VirtualPet(Console.ReadLine()) ;
+            VirtualPet name = new VirtualPet(Console.ReadLine());  //{ Hunger = 10, Energy = 10, Waste = 10
 
             //Ask user to pick treat and toy types to reward hedgie
 
-
-
+            
+            
             //Introduce care points
 
-        }
+    }
     }
 }

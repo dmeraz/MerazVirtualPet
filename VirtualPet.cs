@@ -14,8 +14,10 @@ namespace MerazVirtualPet
         private int hungerScore;
         private int energyScore;
         private int wasteScore;
-        private string treat;
-        private string favToy;
+
+        //Stretch
+        //private string treat;
+        //private string favToy;
         
         //Constructors
 
@@ -31,12 +33,13 @@ namespace MerazVirtualPet
         //    this.wasteScore = wasteScore;
         //}
 
-        public VirtualPet (string name, string treat, string favToy)
-        {
-            this.name = name;
-            this.treat = treat;
-            this.favToy = favToy;
-        }
+        //Stretch
+        //public VirtualPet (string name, string treat, string favToy)
+        //{
+        //    this.name = name;
+        //    this.treat = treat;
+        //    this.favToy = favToy;
+        //}
 
 
         //Methods
@@ -46,17 +49,38 @@ namespace MerazVirtualPet
             return name;
         }
 
+        public int Feed()
+        {
+            return hungerScore;
+        }
+
+        public int Play()
+        {
+            return energyScore;
+        }
+
+        public int CleanCage()
+        {
+            return wasteScore;
+        }
+
         public void Tick(int hunger, int energy, int waste)
+        {
+            ScoreBoard(hunger, energy, waste);
+        }
+
+        private void ScoreBoard(int hunger, int energy, int waste)
         {
             this.hungerScore = hunger;
             this.energyScore = energy;
             this.wasteScore = waste;
         }
 
-        public string Reward()
-        {
-            return treat;
-        }
+        //Stretch
+        //public string Reward()
+        //{
+        //    return treat;
+        //}
 
 
         //Properties
@@ -69,9 +93,9 @@ namespace MerazVirtualPet
             }
             //set
             //{
-            //    hungerScore = value1;
-            //    if (energyScore < 0)
-            //        energyScore = 0;
+            //    hungerscore = value1;
+            //    if (energyscore < 0)
+            //        energyscore = 0;
             //}
         }
 
