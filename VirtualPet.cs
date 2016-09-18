@@ -9,6 +9,7 @@ namespace MerazVirtualPet
     class VirtualPet
     {
         //Fields
+        //Things the pet should have
 
         private string name;
         private int hungerScore;
@@ -19,6 +20,7 @@ namespace MerazVirtualPet
         //private string treat;
         //private string favToy;
         
+
         //Constructors
 
         public VirtualPet (string name)
@@ -26,6 +28,7 @@ namespace MerazVirtualPet
             this.name = name;
         }
 
+        //Do I need this?
         //public VirtualPet (int hungerScore, int energyScore, int wasteScore)
         //{
         //    this.hungerScore = hungerScore;
@@ -43,6 +46,7 @@ namespace MerazVirtualPet
 
 
         //Methods
+        //Ways to care for pet
 
         public string GetName()
         {
@@ -64,6 +68,7 @@ namespace MerazVirtualPet
             return wasteScore;
         }
 
+        //Score keeping method(s)?
         public void Tick(int hunger, int energy, int waste)
         {
             ScoreBoard(hunger, energy, waste);
@@ -91,12 +96,14 @@ namespace MerazVirtualPet
             {
                 return hungerScore;
             }
-            //set
-            //{
-            //    hungerscore = value1;
-            //    if (energyscore < 0)
-            //        energyscore = 0;
-            //}
+            set
+            {
+                hungerScore = 5;
+                if (hungerScore < 0)
+                {
+                    hungerScore = 0;
+                }
+            }
         }
 
         public int Energy
@@ -105,13 +112,29 @@ namespace MerazVirtualPet
             {
                 return energyScore;
             }
-        }
+            set
+            {
+                energyScore = 5;
+                if (energyScore < 0)
+                {
+                    energyScore = 0;
+                }
+            }
 
+        }
         public int Waste
         {
             get
             {
                 return wasteScore;
+            }
+            set
+            {
+                wasteScore = 5;
+                if (wasteScore < 0)
+                {
+                    wasteScore = 0;
+                }
             }
         }
 
