@@ -39,10 +39,6 @@ namespace MerazVirtualPet
             int hungerWaste = userHedgie.Waste;
             userHedgie.Waste = 0;
 
-            Console.WriteLine("\nHunger: " + userHedgie.Feed());
-            Console.WriteLine("Energy: " + userHedgie.Play());
-            Console.WriteLine("Waste: " + userHedgie.CleanCage());
-
             //Stretch
             //Ask user to pick treat and toy types to reward hedgie
 
@@ -51,7 +47,7 @@ namespace MerazVirtualPet
             //Introduce care points
             Console.WriteLine("\nNice to meet you, " + userHedgie.GetName() + "!");
             Console.WriteLine("Keep your new hedgie happy by feeding, playing, and cleaning up after it.");
-            Console.WriteLine("Keep your hedgie's total levels above 10 or it will run away.");
+            Console.WriteLine("If any of your hedgie's levels fall to 0, it will run away.");
 
 
             //Ask user to care for pet by selecting menu item

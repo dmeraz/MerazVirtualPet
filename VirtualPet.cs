@@ -53,33 +53,43 @@ namespace MerazVirtualPet
             return name;
         }
 
-        public int Feed()
+        public void Feed()
         {
-            return hungerScore;
+            Console.WriteLine("Yum!");
+            Hunger += 2;
+            Energy ++;
+            Waste ++;
         }
 
-        public int Play()
+        public void Play()
         {
-            return energyScore;
+            Console.WriteLine("Wee!");
+            Hunger --;
+            Energy --;
+            Waste --;
         }
 
-        public int CleanCage()
+        public void CleanCage()
         {
-            return wasteScore;
+            Console.WriteLine("Ahh...That's better.");
+            Energy += 2;
+            Waste += 2;
         }
 
         //Score keeping method(s)?
-        public void Tick(int hunger, int energy, int waste)
-        {
-            ScoreBoard(hunger, energy, waste);
-        }
+        //public void Tick(int hunger, int energy, int waste)
+        //{
+        //    ScoreBoard(hunger, energy, waste);
+        //}
 
-        private void ScoreBoard(int hunger, int energy, int waste)
-        {
-            this.hungerScore = hunger;
-            this.energyScore = energy;
-            this.wasteScore = waste;
-        }
+        
+        //Probably delete at end
+        //private void ScoreBoard(int hunger, int energy, int waste)
+        //{
+        //    this.hungerScore = hunger;
+        //    this.energyScore = energy;
+        //    this.wasteScore = waste;
+        //}
 
         //Stretch
         //public string Reward()
@@ -118,7 +128,7 @@ namespace MerazVirtualPet
         {
             get
             {
-                return wasteScore;
+                return this.wasteScore;
             }
             set
             {
@@ -126,5 +136,11 @@ namespace MerazVirtualPet
             }
         }
 
+        public void ScoreBoard()
+        {
+            Console.WriteLine("\nHunger: " + Hunger);
+            Console.WriteLine("Energy: " + Energy);
+            Console.WriteLine("Waste: " + Waste);
+        }
     }
 }
