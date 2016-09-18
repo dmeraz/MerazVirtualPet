@@ -18,43 +18,78 @@ namespace MerazVirtualPet
         private string favToy;
         
         //Constructors
+
         public VirtualPet (string name)
         {
             this.name = name;
         }
 
-        public VirtualPet (int hungerScore, int energyScore, int wasteScore)
-        {
-            this.hungerScore = hungerScore;
-            this.energyScore = energyScore;
-            this.wasteScore = wasteScore;
-        }
+        //public VirtualPet (int hungerScore, int energyScore, int wasteScore)
+        //{
+        //    this.hungerScore = hungerScore;
+        //    this.energyScore = energyScore;
+        //    this.wasteScore = wasteScore;
+        //}
 
-        public VirtualPet (string name, string favToy)
+        public VirtualPet (string name, string treat, string favToy)
         {
             this.name = name;
+            this.treat = treat;
             this.favToy = favToy;
         }
 
+
         //Methods
+
         public string GetName()
         {
             return name;
         }
 
-        public void GetHunger(int hunger)
+        public void Tick(int hunger, int energy, int waste)
         {
             this.hungerScore = hunger;
-        }
-
-        public void GetEnergy(int energy)
-        {
             this.energyScore = energy;
-        }
-
-        public void GetWaste(int waste)
-        {
             this.wasteScore = waste;
         }
+
+        public string Reward()
+        {
+            return treat;
+        }
+
+
+        //Properties
+
+        public int Hunger
+        {
+            get
+            {
+                return hungerScore;
+            }
+            //set
+            //{
+            //    hungerScore = value1;
+            //    if (energyScore < 0)
+            //        energyScore = 0;
+            //}
+        }
+
+        public int Energy
+        {
+            get
+            {
+                return energyScore;
+            }
+        }
+
+        public int Waste
+        {
+            get
+            {
+                return wasteScore;
+            }
+        }
+
     }
 }
