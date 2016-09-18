@@ -30,14 +30,14 @@ namespace MerazVirtualPet
             //Stretch: randomize scores
             //Add exit feature
 
-            VirtualPet basil = new VirtualPet();
+            VirtualPet basil = new VirtualPet(5,5,5);
 
             do
             {
                 basil.Tick();
-                string input = Console.ReadLine();
-                //QuitCheck(input);
-                switch (input)
+                string choice = Console.ReadLine();
+                //QuitCheck(choice);
+                switch (choice)
                 {
                     case "1":
                         basil.Feed();

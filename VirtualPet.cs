@@ -17,6 +17,20 @@ namespace MerazVirtualPet
         private int wasteScore;
 
 
+        //Constructors
+
+        public VirtualPet(string name)
+        {
+            this.name = name;
+        }
+
+        public VirtualPet(int hungerScore, int energyScore, int wasteScore)
+        {
+            this.hungerScore = hungerScore;
+            this.energyScore = energyScore;
+            this.wasteScore = wasteScore;
+        }
+
         //Methods to care for pet
 
         public void Feed()
@@ -31,8 +45,8 @@ namespace MerazVirtualPet
         {
             Console.WriteLine("Wee!");
             Hunger --;
-            Energy --;
-            Waste --;
+            Energy -= 3;
+            Waste --; 
         }
 
         public void Clean()
@@ -49,14 +63,14 @@ namespace MerazVirtualPet
         {
             if (Hunger <= 0 || Energy <= 0 || Waste <= 0)
             {
-                Console.WriteLine("Basil ran away!");
+                Console.WriteLine("\nBasil ran away!");
                 Console.WriteLine("Maybe you'll see him the next time you vist the garden. Bye, now!");
                 Console.ReadLine();
                 Environment.Exit(0);
             }
             else if (Hunger >= 10 && Energy >= 10 && Waste >= 10)
             {
-                Console.WriteLine("You're a great hedgie parent! Looks like Basil is home to stay.");
+                Console.WriteLine("\nYou're a great hedgie parent! Looks like Basil is home to stay.");
                 Console.WriteLine("Hunger: " + Hunger);
                 Console.WriteLine("Energy: " + Energy);
                 Console.WriteLine("Waste: " + Waste);
