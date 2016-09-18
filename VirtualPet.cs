@@ -11,47 +11,13 @@ namespace MerazVirtualPet
         //Fields
         //Things the pet should have
 
-        //private string name; Simplified game to pre-named pet
+        private string name;
         private int hungerScore;
         private int energyScore;
         private int wasteScore;
 
-        //Stretch
-        //private string treat;
-        //private string favToy;
-        
 
-        //Constructors
-
-        //public VirtualPet (string name)
-        //{
-        //    this.name = name;
-        //}
-
-        //Do I need this?
-        //public VirtualPet (int hungerScore, int energyScore, int wasteScore)
-        //{
-        //    this.hungerScore = hungerScore;
-        //    this.energyScore = energyScore;
-        //    this.wasteScore = wasteScore;
-        //}
-
-        //Stretch
-        //public VirtualPet (string name, string treat, string favToy)
-        //{
-        //    this.name = name;
-        //    this.treat = treat;
-        //    this.favToy = favToy;
-        //}
-
-
-        //Methods
-        //Ways to care for pet
-
-        //public string GetName()
-        //{
-        //    return name;
-        //}
+        //Methods to care for pet
 
         public void Feed()
         {
@@ -69,36 +35,57 @@ namespace MerazVirtualPet
             Waste --;
         }
 
-        public void CleanCage()
+        public void Clean()
         {
             Console.WriteLine("Ahh...That's better.");
             Energy += 2;
             Waste += 2;
         }
 
-        //Score keeping method(s)?
-        //public void Tick(int hunger, int energy, int waste)
-        //{
-        //    ScoreBoard(hunger, energy, waste);
-        //}
 
-        
-        //Probably delete at end
-        //private void ScoreBoard(int hunger, int energy, int waste)
-        //{
-        //    this.hungerScore = hunger;
-        //    this.energyScore = energy;
-        //    this.wasteScore = waste;
-        //}
+        //Methods to track care
 
-        //Stretch
-        //public string Reward()
-        //{
-        //    return treat;
-        //}
+        public void ScoreBoard()
+        {
+            if (Hunger <= 0 || Energy <= 0 || Waste <= 0)
+            {
+                Console.WriteLine("Basil ran away!");
+                Console.WriteLine("Maybe you'll see him the next time you vist the garden. Bye, now!");
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
+            else if (Hunger >= 10 && Energy >= 10 && Waste >= 10)
+            {
+                Console.WriteLine("You're a great hedgie parent! Looks like Basil is home to stay.");
+                Console.WriteLine("Hunger: " + Hunger);
+                Console.WriteLine("Energy: " + Energy);
+                Console.WriteLine("Waste: " + Waste);
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
+        }
+
+        public void Tick()
+        {
+            ScoreBoard();
+            Console.WriteLine("\n   .|||||||||.");
+            Console.WriteLine("  |||||||||||||");
+            Console.WriteLine(" ||||||||||| ' .\\");
+            Console.WriteLine("`|||||||||| _, __o\n");
+            Console.WriteLine("Hunger: " + Hunger);
+            Console.WriteLine("Energy: " + Energy);
+            Console.WriteLine("Waste: " + Waste);
+            Console.WriteLine("\nPress 1 to Feed, 2 to Play, or 3 to Clean.");
+        }
 
 
         //Properties
+
+        public string Name
+        {
+            get { return this.name; }
+            set { this.name = "Basil"; }
+        }
 
         public int Hunger
         {
@@ -136,25 +123,9 @@ namespace MerazVirtualPet
             }
         }
 
-        public void ScoreBoard()
-        {
-            if (Hunger <= 0 || Energy <= 0 || Waste <= 0)
-            {
-                Console.WriteLine("Basil ran away!");
-                Console.WriteLine("Maybe you'll see him the next time you vist the garden. Bye, now!");
-                Console.ReadLine();
-                Environment.Exit(0);
-            }
-            else if (Hunger >= 10 && Energy >= 10 && Waste >=10)
-            {
-                Console.WriteLine("You're a great hedgie parent! Looks like Basil is home to stay.");
-                Console.WriteLine("Hunger: " + Hunger);
-                Console.WriteLine("Energy: " + Energy);
-                Console.WriteLine("Waste: " + Waste);
-                Console.ReadLine();
-                Environment.Exit(0);
-            }
-            
+        
         }
-    }
-}
+        }
+    
+
+
