@@ -11,7 +11,7 @@ namespace MerazVirtualPet
         //Fields
         //Things the pet should have
 
-        private string name;
+        //private string name; Simplified game to pre-named pet
         private int hungerScore;
         private int energyScore;
         private int wasteScore;
@@ -23,10 +23,10 @@ namespace MerazVirtualPet
 
         //Constructors
 
-        public VirtualPet (string name)
-        {
-            this.name = name;
-        }
+        //public VirtualPet (string name)
+        //{
+        //    this.name = name;
+        //}
 
         //Do I need this?
         //public VirtualPet (int hungerScore, int energyScore, int wasteScore)
@@ -48,10 +48,10 @@ namespace MerazVirtualPet
         //Methods
         //Ways to care for pet
 
-        public string GetName()
-        {
-            return name;
-        }
+        //public string GetName()
+        //{
+        //    return name;
+        //}
 
         public void Feed()
         {
@@ -138,9 +138,23 @@ namespace MerazVirtualPet
 
         public void ScoreBoard()
         {
-            Console.WriteLine("\nHunger: " + Hunger);
-            Console.WriteLine("Energy: " + Energy);
-            Console.WriteLine("Waste: " + Waste);
+            if (Hunger <= 0 || Energy <= 0 || Waste <= 0)
+            {
+                Console.WriteLine("Basil ran away!");
+                Console.WriteLine("Maybe you'll see him the next time you vist the garden. Bye, now!");
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
+            else if (Hunger >= 10 && Energy >= 10 && Waste >=10)
+            {
+                Console.WriteLine("You're a great hedgie parent! Looks like Basil is home to stay.");
+                Console.WriteLine("Hunger: " + Hunger);
+                Console.WriteLine("Energy: " + Energy);
+                Console.WriteLine("Waste: " + Waste);
+                Console.ReadLine();
+                Environment.Exit(0);
+            }
+            
         }
     }
 }
