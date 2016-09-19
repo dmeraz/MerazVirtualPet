@@ -33,7 +33,6 @@ namespace MerazVirtualPet
 
 
             //Use loop to repeat Tick Method
-            //Stretch: Add exit feature
 
             VirtualPet basil = new VirtualPet(5, 5, 5);
 
@@ -61,8 +60,8 @@ namespace MerazVirtualPet
             while (true);
         }
 
-            //Stretch task:
-            public static void Exit(string quit)
+        //Stretch task: Exit feature
+        public static void Exit(string quit)
         {
             if (quit.ToLower() == "quit")
             {

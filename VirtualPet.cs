@@ -11,7 +11,8 @@ namespace MerazVirtualPet
         //Fields
         //Things the pet should have
 
-        private string name;
+        //Name components may be added back in to rename pet.
+        //private string name;
         private int hungerScore;
         private int energyScore;
         private int wasteScore;
@@ -19,10 +20,10 @@ namespace MerazVirtualPet
 
         //Constructors
 
-        public VirtualPet(string name)
-        {
-            this.name = name;
-        }
+        //public VirtualPet(string name)
+        //{
+        //    this.name = name;
+        //}
 
         public VirtualPet(int hungerScore, int energyScore, int wasteScore)
         {
@@ -72,9 +73,9 @@ namespace MerazVirtualPet
             else if (Hunger >= 10 && Energy >= 10 && Waste >= 10)
             {
                 Console.WriteLine("\nYou're a great hedgie parent! Looks like Basil is home to stay.");
-                Console.WriteLine("Hunger: " + Hunger);
+                Console.WriteLine("Food: " + Hunger);
                 Console.WriteLine("Energy: " + Energy);
-                Console.WriteLine("Waste: " + Waste);
+                Console.WriteLine("Clean: " + Waste);
                 System.Threading.Thread.Sleep(500);
                 Environment.Exit(0);
             }
