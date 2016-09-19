@@ -24,19 +24,24 @@ namespace MerazVirtualPet
             Console.WriteLine("If any of Basil's levels fall to 0, he will run away.");
 
 
-            //Ask user to care for pet by selecting menu item
-            //Use loop to repeat
-            //Use tick method
-            //Stretch: randomize scores
-            //Add exit feature
+            //Allow user to begin game or exit
 
-            VirtualPet basil = new VirtualPet(5,5,5);
+            Console.WriteLine("Press \"Enter\" when ready. Type \"Quit\" at any time to exit.");
+            string startOrExit = Console.ReadLine();
+            startOrExit.ToLower();
+            Exit(startOrExit);
+
+
+            //Use loop to repeat Tick Method
+            //Stretch: Add exit feature
+
+            VirtualPet basil = new VirtualPet(5, 5, 5);
 
             do
             {
                 basil.Tick();
                 string choice = Console.ReadLine();
-                //QuitCheck(choice);
+                Exit(choice);
                 switch (choice)
                 {
                     case "1":
@@ -54,6 +59,17 @@ namespace MerazVirtualPet
                 }
             }
             while (true);
+        }
+
+            //Stretch task:
+            public static void Exit(string quit)
+        {
+            if (quit.ToLower() == "quit")
+            {
+                Console.WriteLine("Basil says, \"See you later!\"");
+                System.Threading.Thread.Sleep(500);
+                Environment.Exit(0);
+            }
         }
     }
 }

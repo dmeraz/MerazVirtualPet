@@ -31,6 +31,7 @@ namespace MerazVirtualPet
             this.wasteScore = wasteScore;
         }
 
+
         //Methods to care for pet
 
         public void Feed()
@@ -65,7 +66,7 @@ namespace MerazVirtualPet
             {
                 Console.WriteLine("\nBasil ran away!");
                 Console.WriteLine("Maybe you'll see him the next time you vist the garden. Bye, now!");
-                Console.ReadLine();
+                System.Threading.Thread.Sleep(500);
                 Environment.Exit(0);
             }
             else if (Hunger >= 10 && Energy >= 10 && Waste >= 10)
@@ -74,10 +75,13 @@ namespace MerazVirtualPet
                 Console.WriteLine("Hunger: " + Hunger);
                 Console.WriteLine("Energy: " + Energy);
                 Console.WriteLine("Waste: " + Waste);
-                Console.ReadLine();
+                System.Threading.Thread.Sleep(500);
                 Environment.Exit(0);
             }
         }
+
+
+        //Tick updates levels and asks user to care for pet by selecting menu item
 
         public void Tick()
         {
@@ -86,20 +90,20 @@ namespace MerazVirtualPet
             Console.WriteLine("  |||||||||||||");
             Console.WriteLine(" ||||||||||| ' .\\");
             Console.WriteLine("`|||||||||| _, __o\n");
-            Console.WriteLine("Hunger: " + Hunger);
+            Console.WriteLine("Food: " + Hunger);
             Console.WriteLine("Energy: " + Energy);
-            Console.WriteLine("Waste: " + Waste);
+            Console.WriteLine("Clean: " + Waste);
             Console.WriteLine("\nPress 1 to Feed, 2 to Play, or 3 to Clean.");
         }
 
 
         //Properties
 
-        public string Name
-        {
-            get { return this.name; }
-            set { this.name = "Basil"; }
-        }
+        //public string Name
+        //{
+        //    get { return this.name; }
+        //    set { this.name = "Basil"; }
+        //}
 
         public int Hunger
         {
